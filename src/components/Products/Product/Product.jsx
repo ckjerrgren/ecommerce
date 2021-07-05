@@ -8,7 +8,7 @@ const Product = ( { product }) => {
     const classes = useStyles()
     return (
             <Card className={classes.root}>
-                <CardMedia className={classes.media} image={product.image} title={Product.name} />
+                <CardMedia className={classes.media} image={product.media.source} title={Product.name} />
                 <CardContent>
                     <div className={classes.cardContent}>
                         {/* H5 is the size and gutterbottom means it willl have space att the bottom  */}
@@ -17,7 +17,7 @@ const Product = ( { product }) => {
                         </Typography>
                     
                         <Typography variant="h5">
-                            {product.price}
+                            {product.price.formatted_with_symbol}
                         </Typography>
                     </div>
                     <Typography variant="body" color="textSecondary">
